@@ -34,10 +34,12 @@ export default class QuoteKellee extends Component {
         <View style={styles.bodyContainer}>
 
           <Image 
+            resizeMode='contain'
             style={styles.image}
-            source={require('./funnys/8.jpg')} 
+            source={require('./funnys/3.jpg')} 
           />
-
+        </View>  
+        <View>
           <Button
             style={styles.againButton}
             onPress={() => this.getRandomNumber() }
@@ -63,17 +65,19 @@ const styles = StyleSheet.create({
   },
   bodyContainer: {
     flex: 28,
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection:'row'
   },
   text: {
     color: 'blue',
     textAlign: 'center'
   },
   image: {
-    flex: 1,
+    flex: 1, 
+    resizeMode: "contain", 
   },
   againButton: {
-    marginTop: 60,
+    flex: 1,
     borderWidth: 2,
     borderColor: 'black',
     backgroundColor: 'green'
